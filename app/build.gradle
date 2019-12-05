@@ -34,7 +34,12 @@ dependencies {
 
 //    implementation 'com.google.firebase:firebase-core:16.0.1'
 //    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
-    implementation 'com.google.android.libraries.places:places:1.0.0'
+    implementation ("com.google.android.libraries.places:places-compat:1.0.0")
+    implementation ("com.schibstedspain.android:leku:5.0.0") {
+        exclude group: 'com.google.android.gms'
+        exclude module: "play-services-places"
+    }
+    implementation 'com.google.code.gson:gson:2.8.6'
 }
 
 apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle plugin
